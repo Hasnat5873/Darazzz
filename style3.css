@@ -1,0 +1,142 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f5ff;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #093c82;
+  padding: 15px 30px;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.lang-container {
+  position: relative;
+  display: inline-block;
+}
+
+.lang-toggle {
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 6px;
+  user-select: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.lang-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.lang-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  list-style: none;
+  color: black;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 140px;
+  z-index: 100;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.lang-menu.show {
+  display: block;
+}
+
+.lang-menu li {
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.lang-menu li:hover {
+  background-color: #eee;
+}
+
+main {
+  text-align: center;
+  margin-top: 30px;
+  padding: 0 15px;
+}
+
+form {
+  background: white;
+  padding: 30px;
+  max-width: 400px;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+input, select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus {
+  border-color: #0164e5;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #0164e5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0149b7;
+}
+
+.required {
+  color: red;
+  margin-left: 3px;
+}
+
+.checkbox-group {
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  height: 16px;
+  margin-top: -5px;
+  margin-bottom: 10px;
+}

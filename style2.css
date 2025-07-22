@@ -1,0 +1,224 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f7f7f7;
+  color: #333;
+}
+
+/* Top Bar */
+.top-bar {
+  background-color: #f85606;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.lang-country {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+/* Dropdowns */
+.dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown span {
+  font-size: 14px;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.dropdown span:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  color: #333;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  z-index: 100;
+  width: 150px;
+}
+
+.dropdown-menu li {
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.dropdown-menu li:hover {
+  background-color: #f2f2f2;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+/* Main Container */
+.container {
+  display: flex;
+  height: calc(100vh - 50px);
+}
+
+/* Left Side - Banner */
+.left-content {
+  flex: 1.5;
+  background-image: url('https://img.freepik.com/free-vector/ecommerce-background-flat-style_23-2147764758.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.overlay h1 {
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+.overlay p {
+  font-size: 16px;
+}
+
+/* Right Side - Login Form */
+.right-box {
+  flex: 1;
+  background: white;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.05);
+}
+
+.right-box h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.right-box input[type="text"],
+.right-box input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 14px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.password-field {
+  position: relative;
+}
+
+.password-field span {
+  position: absolute;
+  right: 12px;
+  top: 9px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.right-box button {
+  background-color: #f85606;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.right-box button:hover {
+  background-color: #d94d05;
+}
+
+.terms {
+  margin: 12px 0;
+  font-size: 12px;
+}
+
+.terms a {
+  color: #f85606;
+  text-decoration: none;
+}
+
+.terms a:hover {
+  text-decoration: underline;
+}
+
+.links {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.links a {
+  color: #333;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.new-account {
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+.new-account a {
+  color: #f85606;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.new-account a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left-content {
+    height: 220px;
+  }
+
+  .right-box {
+    padding: 30px 20px;
+  }
+}

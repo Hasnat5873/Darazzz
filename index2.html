@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daraz Seller Center Clone</title>
+  <link rel="stylesheet" href="style2.css" />
+</head>
+<body>
+  <header class="top-bar">
+    <div class="logo">Daraz Seller Center</div>
+    <div class="lang-country">
+      <!-- Country Toggle -->
+      <div class="dropdown">
+        <button onclick="toggleDropdown('countryMenu')">
+          🌐 <span id="selectedCountry">Bangladesh</span> ⏷
+        </button>
+        <ul class="dropdown-menu" id="countryMenu">
+          <li onclick="selectOption('country', 'Bangladesh')">🇧🇩 Bangladesh</li>
+          <li onclick="selectOption('country', 'India')">🇮🇳 India</li>
+          <li onclick="selectOption('country', 'Pakistan')">🇵🇰 Pakistan</li>
+        </ul>
+      </div>
+
+      <!-- Language Toggle -->
+      <div class="dropdown">
+        <button onclick="toggleDropdown('languageMenu')">
+          <span id="selectedLanguage">English</span> ⏷
+        </button>
+        <ul class="dropdown-menu" id="languageMenu">
+          <li onclick="selectOption('language', 'English')">🇺🇸 English</li>
+          <li onclick="selectOption('language', 'বাংলা')">🇧🇩 বাংলা</li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Left Banner Section -->
+    <section class="left-content">
+      <div class="overlay">
+        <h1>Become A Daraz Seller<br />Today!</h1>
+        <p>Create a Daraz seller account now and reach millions of customers!</p>
+      </div>
+    </section>
+
+    <!-- Right Login Section -->
+    <section class="right-box">
+      <h2>Login with Password</h2>
+      <input type="text" placeholder="📱 Mobile Number / Email" />
+
+      <div class="password-field">
+        <input type="password" placeholder="🔒 Password" id="passwordInput" />
+        <span onclick="togglePassword()" title="Show Password">👁️</span>
+      </div>
+
+      <button>🔐 Login</button>
+
+      <p class="terms">
+        By clicking Login, you agree to the
+        <a href="#">Terms & Conditions</a> and
+        <a href="#">Privacy Policy</a>.
+      </p>
+
+      <div class="links">
+        <a href="#">🔁 Reset Password</a> |
+        <a href="./index.3.html">🌍 Register as Global Seller</a>
+      </div>
+
+      <div class="new-account">
+        🚀 Don't have an account yet?
+        <a href="#">Create a new account</a>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function togglePassword() {
+      const input = document.getElementById("passwordInput");
+      input.type = input.type === "password" ? "text" : "password";
+    }
+
+    function toggleDropdown(id) {
+      document.getElementById(id).classList.toggle("show");
+    }
+
+    function selectOption(type, value) {
+      if (type === "country") {
+        document.getElementById("selectedCountry").textContent = value;
+        document.getElementById("countryMenu").classList.remove("show");
+      } else if (type === "language") {
+        document.getElementById("selectedLanguage").textContent = value;
+        document.getElementById("languageMenu").classList.remove("show");
+      }
+    }
+
+    window.onclick = function (event) {
+      if (!event.target.closest(".dropdown")) {
+        document.querySelectorAll(".dropdown-menu").forEach(menu => menu.classList.remove("show"));
+      }
+    };
+  </script>
+</body>
+</html>

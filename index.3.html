@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cross-Border Seller Registration</title>
+  <link rel="stylesheet" href="style3.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">🌐 <span id="title">Cross-Border Seller Center</span></div>
+    
+    <div class="lang-container">
+      <div class="lang-toggle" id="langToggle">🌐 English ⏷</div>
+      <ul class="lang-menu" id="langMenu">
+        <li data-lang="en">English</li>
+        <li data-lang="bn">বাংলা</li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <h2 id="welcome">Welcome to the Cross-Border Seller Center</h2>
+    <form id="registrationForm" novalidate>
+
+      <div class="form-group">
+        <label for="country" id="label-country">
+          Country/Region of Company Registration <span class="required">*</span>
+        </label>
+        <select id="country" required>
+          <option value="">-- Select Country --</option>
+          <option value="CN">Mainland China</option>
+        </select>
+        <small class="error"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="email" id="label-email">Email Address <span class="required">*</span></label>
+        <input type="email" id="email" placeholder="Please enter your email" required />
+        <small class="error"></small>
+      </div>
+
+      <div class="form-group">
+        <input type="text" id="emailCode" placeholder="Enter email verification code" required />
+        <small class="error"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="password" id="label-password">Set a Password <span class="required">*</span></label>
+        <input type="password" id="password" placeholder="Please enter password" required />
+        <small class="error"></small>
+      </div>
+
+      <div class="form-group">
+        <input type="password" id="confirmPassword" placeholder="Confirm your password" required />
+        <small class="error"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="phone" id="label-phone">Bind Phone Number <span class="required">*</span></label>
+        <input type="tel" id="phone" placeholder="Please enter your mobile number" required />
+        <small class="error"></small>
+      </div>
+
+      <div class="form-group">
+        <input type="text" id="smsCode" placeholder="Enter SMS verification code" required />
+        <small class="error"></small>
+      </div>
+
+      <div class="form-group checkbox-group">
+        <label>
+          <input type="checkbox" id="terms1" required />
+          <span id="termsText1">I agree to the Cross-border Merchant Unified Warehouse Services Agreement</span>
+        </label>
+        <label>
+          <input type="checkbox" id="terms2" required />
+          <span id="termsText2">I agree to the Consent Letter for Cross-border Transmission and Processing</span>
+        </label>
+        <small class="error"></small>
+      </div>
+
+      <button type="submit" id="submitBtn">Register</button>
+    </form>
+  </main>
+
+  <script src="script3.js"></script>
+</body>
+</html>
